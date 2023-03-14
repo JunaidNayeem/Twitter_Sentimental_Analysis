@@ -1,0 +1,74 @@
+* {
+  font-family: "Source Sans Pro", "monaco", "PT Mono", "Courier", monospace;
+}
+body {
+  background-image: url(./assests/23995734.jpg), url(./assests/globe.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position-x: center, right;
+  height: 100vh;
+  background-position-y: bottom, center;
+  background-size: 500px 500px;
+}
+header {
+  font-size: 48px;
+  font-weight: bolder;
+  margin-left: 50px;
+}
+section {
+  margin: 50px;
+}
+section > div {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+div button {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  width: 200px;
+  padding: 10px;
+}
+div button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: 0.8s ease-out;
+}
+div textarea {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  max-height: 150px;
+  min-height: 150px;
+  max-width: 400px;
+  min-width: 400px;
+  padding: 5px;
+}
+div input {
+  max-width: 400px;
+  min-width: 300px;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  font-size: 16px;
+}
+footer {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+footer p,
+h2,
+h5 {
+  margin: 0;
+}
+footer h5 {
+  font-size: 12px;
+}
