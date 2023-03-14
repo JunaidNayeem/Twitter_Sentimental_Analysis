@@ -1,55 +1,69 @@
-body{
-  font-family: 'Trebuchet MS', sans-serif;
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  background-color: black;
 }
 
-.main-body{
-  background: linear-gradient(#2DB1FF, black); 
+header {
+  height: 72px;
+  width: 100%;
+  background-color: #2db1ff;
+  border: 2px solid white;
+}
+
+header img {
+  height: 100%;
+}
+header img:hover {
+  cursor: pointer;
+}
+.main-body {
+  background: linear-gradient(#2db1ff, black);
   background-repeat: no-repeat;
   padding: 25px;
   height: 500px;
   align-items: center;
   justify-content: space-around;
   border: 1px solid transparent;
-  border-radius: 25px;
 }
-.main-input{
+.main-input {
   display: flex;
   flex-direction: row;
   gap: 35px;
   align-items: flex-start;
 }
-.main-input form{
+.main-input form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 400px;
   border: 3px solid white;
   border-radius: 5px;
   padding: 10px;
 }
-.main-body .main-input form .text{
-      width: 400px;
-      height: 100px;
-      border: 1px solid transparent;
-      border-radius: 3px;
+.main-body .main-input form .text {
+  width: 400px;
+  height: 100px;
+  border: 1px solid transparent;
+  border-radius: 3px;
 }
-.main-body .main-input form h2{
+.main-body .main-input form h2 {
   color: white;
   font-weight: 600;
   font-family: cursive;
   margin-bottom: 10px;
 }
-.main-body .main-input form .btn{
-      border: 1px solid #2DB1FF;
-      background-color:white;
-      color: #2DB1FF;
-      font-weight: 600;
-      font-size: 18px;
-      font-family: cursive;
-      padding: 5px 12px;
-      border-radius: 3px;
+.main-body .main-input form .btn {
+  border: 1px solid #2db1ff;
+  background-color: white;
+  color: #2db1ff;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: cursive;
+  padding: 5px 12px;
+  border-radius: 3px;
 }
-.main-body .main-input form .btn:hover{
-  background-color: #2DB1FF ;
+.main-body .main-input form .btn:hover {
+  background-color: #2db1ff;
   cursor: pointer;
   color: white;
 }
@@ -59,18 +73,18 @@ body{
   float: right;
   padding-bottom: 10px;
 }
-.main-body h3{
+.main-body h3 {
   color: white !important;
   font-size: 18px;
   font-weight: 400;
 }
-.descr h1{
+.descr h1 {
   font-size: 32px;
   font-weight: 400;
   color: white;
   margin-left: 2%;
 }
-.descr p{
+.descr p {
   font-size: 18px;
   font-weight: 100;
   color: white;
@@ -78,24 +92,23 @@ body{
 }
 /* CSS for Tweet page------------------------ */
 
-.tweet-body{
-  font-family: 'Trebuchet MS', sans-serif;
+.tweet-body {
+  font-family: "Trebuchet MS", sans-serif;
   height: 100%;
-  background-color: #2DB1FF;
+  background-color: #2db1ff;
   color: white;
-
 }
-.tweet-body table{
+.tweet-body table {
   width: 100%;
 }
-.tweet-body table tbody{
+.tweet-body table tbody {
   gap: 20px;
   display: flex;
   flex-direction: column;
 }
-.tweet-body table tbody tr{
+.tweet-body table tbody tr {
   display: flex;
-  margin-inline:auto;
+  margin-inline: auto;
   width: 80%;
   justify-content: space-between;
   align-items: center;
@@ -103,9 +116,9 @@ body{
   border-radius: 3px;
   padding: 5px;
 }
-.tweet-body table tbody tr td:first-child{
+.tweet-body table tbody tr td:first-child {
   width: 70%;
 }
-.tweet-body table tbody tr td:last-child{
- width: 10%;
+.tweet-body table tbody tr td:last-child {
+  width: 10%;
 }
