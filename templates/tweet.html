@@ -1,21 +1,37 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'index.css' %}" />
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <title>Tweet Analysis</title>
   </head>
-  <body class="tweet-body">
-    <table>
-      {% for key,value in content.items %}
-      <tr>
-        <td>{{value.tweet}}</td>
-        <td>{{value.sent.polarity}}</td>
-      </tr>
-      {% endfor %}
-    </table>
+  <body>
+    <header>Samsung <br />Innovation Campus</header>
+    <section>
+      <h1>Hackathon<br />Bhubaneswar</h1>
+      <div>
+        <div style="display: inline-flex; gap: 5px">
+          <form method="post" action="{% url 'tweets' %}">
+            {% csrf_token %}
+          <input type="text" name='query' placeholder="Search a Topic or User" />
+          <lord-icon
+            src="https://cdn.lordicon.com/xfftupfv.json"
+            trigger="hover"
+            style="width: 40px; height: 40px"
+          >
+          </lord-icon>
+        </div>
+        <input type="submit" value="Analyze">
+      </form> 
+        <p>Download Results as CSV ...</p>
+      </div>
+    </section>
+    <footer>
+      <p>Together for tomorrow!</p>
+      <h2>Enabeling People</h2>
+      <h5>Education for future Generations</h5>
+    </footer>
   </body>
 </html>

@@ -2,7 +2,7 @@
   font-family: "Source Sans Pro", "monaco", "PT Mono", "Courier", monospace;
 }
 body {
-  background-image: url(./assests/23995734.jpg), url(./assests/globe.png);
+  background-image: url('/static/assets/23995734.jpg'), url('/static/assets/globe.png');
   background-repeat: no-repeat, no-repeat;
   background-position-x: center, right;
   height: 100vh;

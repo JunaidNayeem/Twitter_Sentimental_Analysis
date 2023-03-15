@@ -6,16 +6,13 @@ from . import analyze
 from .twitterapi import BEARER_TOKEN , search_twitter
 
 def index(request):
-
-    if request.method == 'POST':
-
-        query = request.POST['query']
-        return render(request,'index.html',analyze.get_sentiment(query))
-    
-    else:
-
         return render(request,'index.html')
 
+def sentence(request):
+    if request.method=='POST':
+        sent = request.POST['sent']
+        return render(request,'phrase.html',analyze.get_absolute_sentiment(sent))
+    return render(request,'phrase.html')
 
 def get_tweets(request):
 
@@ -36,6 +33,8 @@ def get_tweets(request):
                 content.update({1:"No Tweet Found"})
         else:
             content.update({1:"No Query Entered"})
-        return render(request,'tweet.html',{'content':content})
+        return render(request,'tweet_old.html',{'content':content})
     else:
-        return redirect('index')
+        return render(request,'tweet.html')
+
+

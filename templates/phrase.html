@@ -1,7 +1,8 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tweet Analysis</title>
   </head>
@@ -10,8 +11,13 @@
     <section>
       <h1>Hackathon<br />Bhubaneswar</h1>
       <div>
-        <button>Analyse Phraze</button>
-        <button>Get Twitter Results</button>
+        <form method="post" action="{% url 'sentence' %}">
+          {% csrf_token %}
+        <input type="textarea" name="sent" cols="30" rows="10"></textarea>
+        <input type="submit" value="Analyse">
+      </form>
+        <!--<p>Analysing Result ...</p>-->
+        <h2>{{polarity}}</h2>
       </div>
     </section>
     <footer>
