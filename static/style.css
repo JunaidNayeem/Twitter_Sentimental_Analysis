@@ -2,7 +2,8 @@
   font-family: "Source Sans Pro", "monaco", "PT Mono", "Courier", monospace;
 }
 body {
-  background-image: url('/static/assets/23995734.jpg'), url('/static/assets/globe.png');
+  background-image: url("/static/assets/23995734.jpg"),
+    url("/static/assets/globe.png");
   background-repeat: no-repeat, no-repeat;
   background-position-x: center, right;
   height: 100vh;
@@ -22,6 +23,25 @@ section > div {
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+div form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+div form #submitbtn {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  max-width: 200px;
+  min-width: 200px;
+  padding: 10px;
+}
+div form #submitbtn:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: 0.8s ease-out;
 }
 div button {
   background-color: white;
@@ -55,6 +75,7 @@ div input {
   color: black;
   padding: 5px;
   font-size: 16px;
+  font-weight: 400;
 }
 footer {
   position: fixed;
@@ -71,4 +92,35 @@ h5 {
 }
 footer h5 {
   font-size: 12px;
+}
+/* css for tweet table page */
+.tweet-body {
+  font-family: "Trebuchet MS", sans-serif;
+  height: 100%;
+  background: none;
+  color: black;
+}
+.tweet-body table {
+  width: 100%;
+}
+.tweet-body table tbody {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.tweet-body table tbody tr {
+  display: flex;
+  margin-inline: auto;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px;
+}
+.tweet-body table tbody tr td:first-child {
+  width: 70%;
+}
+.tweet-body table tbody tr td:last-child {
+  width: 10%;
 }

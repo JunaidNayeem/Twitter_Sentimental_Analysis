@@ -4,7 +4,6 @@
   <head>
     <link rel="stylesheet" href="{% static 'style.css' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
     <title>Tweet Analysis</title>
   </head>
   <body>
@@ -12,19 +11,15 @@
     <section>
       <h1>Hackathon<br />Bhubaneswar</h1>
       <div>
-        <div style="display: inline-flex; gap: 5px">
-          <form method="post" action="{% url 'tweets' %}">
-            {% csrf_token %}
-          <input type="text" name='query' placeholder="Search a Topic or User" />
-          <lord-icon
-            src="https://cdn.lordicon.com/xfftupfv.json"
-            trigger="hover"
-            style="width: 40px; height: 40px"
-          >
-          </lord-icon>
-        </div>
-        <input type="submit" value="Analyze">
-      </form> 
+        <form method="post" action="{% url 'tweets' %}">
+          {% csrf_token %}
+          <input
+            type="text"
+            name="query"
+            placeholder="Search a Topic or User"
+          />
+          <input id="submitbtn" type="submit" value="Analyze" />
+        </form>
         <p>Download Results as CSV ...</p>
       </div>
     </section>

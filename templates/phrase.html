@@ -14,7 +14,7 @@
         <form method="post" action="{% url 'sentence' %}">
           {% csrf_token %}
         <input type="textarea" name="sent" cols="30" rows="10"></textarea>
-        <input type="submit" value="Analyse">
+        <input id="submitbtn" type="submit" value="Analyse">
       </form>
         <!--<p>Analysing Result ...</p>-->
         <h2>{{polarity}}</h2>
